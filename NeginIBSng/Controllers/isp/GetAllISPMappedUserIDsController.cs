@@ -24,8 +24,8 @@ namespace NeginIBSng.Controllers.isp
         public async Task<IActionResult> Post(SendModel<GetAllISPMappedUserIDsInputModel> model)
         {
             var result = new ApiModol<GetAllISPMappedUserIDsOutputModel>();
-            var url = _configuration.GetSection("parspooyesh").Get<string>();
-
+            var url = _configuration.GetSection("IBSng").Get<string>();
+                
             using var client = new JsonHttpClient();
             var httpResponse = await client.PostJsonAsync(url, model);
             if (!httpResponse.IsSuccessStatusCode)

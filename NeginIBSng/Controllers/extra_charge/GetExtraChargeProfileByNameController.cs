@@ -23,7 +23,7 @@ namespace NeginIBSng.Controllers.extra_charge
         public async Task<IActionResult> Post(SendModel<GetExtraChargeProfileByNameInputModel> model)
         {
             var result = new ApiModol<GetExtraChargeProfileByNameOutputModel>();
-            var url = _configuration.GetSection("parspooyesh").Get<string>();
+            var url = _configuration.GetSection("IBSng").Get<string>();
 
             using var client = new JsonHttpClient();
             var httpResponse = await client.PostJsonAsync(url, model);

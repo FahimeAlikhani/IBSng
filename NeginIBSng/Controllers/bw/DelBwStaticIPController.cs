@@ -23,7 +23,7 @@ namespace NeginIBSng.Controllers.bw
         public async Task<IActionResult> Post(SendModel<DelBwStaticIPInputModel> model)
         {
             var result = new ApiModol<DelBwStaticIPOutputModel>();
-            var url = _configuration.GetSection("parspooyesh").Get<string>();
+            var url = _configuration.GetSection("IBSng").Get<string>();
 
             using var client = new JsonHttpClient();
             var httpResponse = await client.PostJsonAsync(url, model);

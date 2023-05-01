@@ -1,29 +1,23 @@
 ﻿using NeginIBSng.HttpClient;
 using NeginIBSng.Handlers;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using NeginIBSng.Handlers.perm;
 
 namespace NeginIBSng.Controllers.charge
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HasPermController : ControllerBase
+    public class GetPermsOfAdminControllers : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public HasPermController(IConfiguration configuration)
+        public GetPermsOfAdminControllers(IConfiguration configuration)
         {
             _configuration = configuration;
         }
-        public async Task<IActionResult> Post(SendModel<HasPermInputModel> model)
+        public async Task<IActionResult> Post(SendModel<GetPermsOfAdminInputModel> model)
         {
-            var result = new ApiModol<HasPermOutputModel>();
-            var url = _configuration.GetSection("parspooyesh").Get<string>();
+            var result = new ApiModol<getPermsOfAdminOutputModel>();
+            var url = _configuration.GetSection("IBSng").Get<string>();
 
             using var client = new JsonHttpClient();
             var httpResponse = await client.PostJsonAsync(url, model);
@@ -33,7 +27,7 @@ namespace NeginIBSng.Controllers.charge
                 return Ok(result);
             }
             var stringJson = await httpResponse.Content.ReadAsStringAsync();
-            var replyModel = Newtonsoft.Json.JsonConvert.DeserializeObject<HasPermOutputModel>(stringJson);
+            var replyModel = Newtonsoft.Json.JsonConvert.DeserializeObject<getPermsOfAdminOutputModel>(stringJson);
 
             replyModel.jsonrpc = "2.0";
             result.Success = true;

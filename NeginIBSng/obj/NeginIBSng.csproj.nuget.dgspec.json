@@ -1,32 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\NeginApp\\NeginIBSng\\NeginIBSng\\NeginIBSng\\NeginIBSng.csproj": {}
+    "C:\\Users\\01\\source\\repos\\New\\NeginIBSng\\NeginIBSng.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\NeginApp\\NeginIBSng\\NeginIBSng\\NeginIBSng\\NeginIBSng.csproj": {
+    "C:\\Users\\01\\source\\repos\\New\\NeginIBSng\\NeginIBSng.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\NeginApp\\NeginIBSng\\NeginIBSng\\NeginIBSng\\NeginIBSng.csproj",
+        "projectUniqueName": "C:\\Users\\01\\source\\repos\\New\\NeginIBSng\\NeginIBSng.csproj",
         "projectName": "NeginIBSng",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\NeginApp\\NeginIBSng\\NeginIBSng\\NeginIBSng\\NeginIBSng.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\NeginApp\\NeginIBSng\\NeginIBSng\\NeginIBSng\\obj\\",
+        "projectPath": "C:\\Users\\01\\source\\repos\\New\\NeginIBSng\\NeginIBSng.csproj",
+        "packagesPath": "C:\\Users\\01\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\01\\source\\repos\\New\\NeginIBSng\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\01\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net6.0": {
@@ -44,10 +39,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -72,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
